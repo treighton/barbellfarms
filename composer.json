@@ -1,0 +1,50 @@
+{
+  "name": "10up/bbfarm",
+  "type": "wordpress-theme",
+  "authors": [
+    {
+      "name": "10up",
+      "email": "info@10up.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "wpackagist-plugin/wp-ses":"^1.4",
+    "wpackagist-plugin/wpforms-lite":"1.6.3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bbfarm\\": "includes/classes/"
+    }
+  },
+  "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "10up/wpacceptance": "dev-master",
+    "10up/phpcs-composer": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "themes/{$name}": [
+        "type:wordpress-theme"
+      ],
+      "plugins/{$name}": [
+        "type:wordpress-plugin"
+      ],
+      "mu-plugins/{$name}": [
+        "type:wordpress-muplugin"
+      ]
+    }
+  },
+
+  "scripts": {
+    "lint": "phpcs .",
+    "lint-fix": "phpcbf ."
+  }
+}

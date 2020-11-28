@@ -1,0 +1,16 @@
+
+# Ignore the dependency management directories
+vendor/
+!themes/in-culture/assets/vendor
+node_modules/
+
+# Exclude dist directories
+dist
+
+!plugins/wp-safe-edit/dist
+
+*.log
+.idea
+uploads
+.DS_Store
+db.php
